@@ -41,7 +41,7 @@ module.exports.createProject = function productList(body) {
       let query = `INSERT INTO projects (projectName, projDesc, coPlanner) VALUES (
         '${body.projectName}', 
         '${body.projDesc}', 
-        '${body.coPlanner ? body.coPlanner : "NULL"}'
+        '${body.coPlanner ? body.coPlanner+','+ : }'
       )`;
 
       //   const rows = await pgConnection.query(query);
